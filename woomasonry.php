@@ -5,7 +5,7 @@
  * @link              http://www.intensewp.com/
  * @since             1.0.0
  * @package           Woomasonry
- * 
+ *
  * @wordpress-plugin
  * Plugin Name:       WooCommerce Products Masonry Grid
  * Plugin URI:        http://www.intensewp.com/woomasonry-woocommerce-products-post-masonry-grid/
@@ -43,16 +43,19 @@ function woomasonry_home() {
     include 'wm_home.php';
 }
 
-function sample_admin_notice__error() {
+function woomasonry_admin_notice__error() {
     $class = 'notice notice-error';
     $message = __('It seems WooCommerce is not installed or activated. Woo Masonry Products Grid works only with active Woocommerce plugin.', 'woomasonry');
 
     printf('<div class="%1$s"><p>%2$s</p></div>', esc_attr($class), esc_html($message));
 }
 
-if (!class_exists('WooCommerce')) {
-    add_action('admin_notices', 'sample_admin_notice__error');
+function woomasonry_plugin_init() {
+  if (!class_exists('WooCommerce')) {
+    add_action('admin_notices', 'woomasonry_admin_notice__error');
+  }
 }
+add_action( 'plugins_loaded', 'woomasonry_plugin_init' );
 
 function enqueue_woomasonry() {
     wp_enqueue_style('woomasonry_css1', plugins_url('css/layout.css', __FILE__));
@@ -65,7 +68,7 @@ add_action('wp_enqueue_scripts', 'enqueue_woomasonry');
 /* if (class_exists('WooCommerce')) {
   add_shortcode('woomasonry_grid', 'woomasonry_isotope_html');
   } else {
-  #add_action('admin_notices', 'sample_admin_notice__error');
+  #add_action('admin_notices', 'woomasonry_admin_notice__error');
   add_shortcode('woomasonry_grid', 'woomasonry_public_error');
   } */
 
