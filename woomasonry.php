@@ -32,6 +32,7 @@ if (!defined('WPINC')) {
  *
  * @since    1.0.0
  */
+
 add_action('admin_menu', 'woomasonry_add_menu');
 
 function woomasonry_add_menu() {
@@ -80,7 +81,7 @@ function woomasonry_public_error() {
 }
 
 function woomasonry_isotope_html($atts) {
-
+    $wm_output  = "";
     $wm_atts = shortcode_atts(array(
         'number' => 6,
         'cat' => '',
@@ -132,7 +133,7 @@ function woomasonry_isotope_html($atts) {
 			<h1><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h1>
 			<p class="woomsprce">' . $_product->get_price_html() . '</p>
 			' .
-                        apply_filters('woocommerce_loop_add_to_cart_link', sprintf('<a href="%s" rel="nofollow" data-product_id="%s" data-product_sku="%s" class="woomscart button %s product_type_%s">%s</a>', esc_url($_product->add_to_cart_url()), esc_attr($_product->id), esc_attr($_product->get_sku()), $_product->is_purchasable() ? 'add_to_cart_button' : '', esc_attr($_product->product_type), esc_html($_product->add_to_cart_text())
+                        apply_filters('woocommerce_loop_add_to_cart_link', sprintf('<a href="%s" rel="nofollow" data-product_id="%s" data-product_sku="%s" class="woomscart button %s product_type_%s">%s</a>', esc_url($_product->add_to_cart_url()), esc_attr($_product->get_id()), esc_attr($_product->get_sku()), $_product->is_purchasable() ? 'add_to_cart_button' : '', esc_attr($_product->get_type()), esc_html($_product->add_to_cart_text())
                                 ), $_product) . '
                             </div>
             </div>';
