@@ -1,5 +1,5 @@
 === WooCommerce Products Masonry Grid ===
-Contributors: hozyali
+Contributors: hozyali, DraftPress
 Tags: woocommerce, masonry woocommerce grid, masonry products, woocommerce masonry products
 Donate link: http://www.intensewp.com
 Requires at least: 4.0
