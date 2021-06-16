@@ -40,7 +40,7 @@ function woomasonry_home() {
 
 function woomasonry_admin_notice__error() {
     $class = 'notice notice-error';
-    $message = __('It seems 1 WooCommerce is not installed or activated. Woo Masonry Products Grid works only with active Woocommerce plugin.', 'woomasonry');
+    $message = __('It seems WooCommerce is not installed or activated. Woo Masonry Products Grid works only with active Woocommerce plugin.', 'woomasonry');
 
     printf('<div class="%1$s"><p>%2$s</p></div>', esc_attr($class), esc_html($message));
 }

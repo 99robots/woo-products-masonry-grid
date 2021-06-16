@@ -1,54 +1,8 @@
 <?php if (!defined('ABSPATH')) exit; // Exit if accessed directly                           ?>
 
 <link rel="stylesheet" href="css/all.min.css">
-<style>
-.dflex{
-  display: flex;
-}
-.mr10{
-  margin-right: 10px;
-}
-.pt3{
-  padding-top: 3px;
-}
-.pull-right{
-  float: right;
-}
-.pull-left{
-  float: left;
-}
-.info-box{
-  padding: 20px;
-  background: #fff;
-  display: inline-block;
-  width: 40%;
-  border: 1px solid #e5e5e5;
-  box-shadow: 0 1px 1px rgba(0,0,0,.04);
-  margin-bottom: 10px;
-}
-.bg-white{
-  background: #f5f5f5;
-}
-.fs16{
-  font-size: 16px;
-}
-.text-green{
-  color: green;
-}
-.clearfix{
-  clear: both;
-}
-.shortcode{
-  font-weight: bold;
-  display: contents;
-}
-@media only screen and (max-width: 768px){
-  .info-box{
-    width: auto;
-    float: none !important;
-  }
-}
-</style>
+<link rel="stylesheet" href="css/style.css">
+
 <div class="wrap">
   <h1>Dashboard</h1>
   <div id="welcome-panel" class="welcome-panel">
