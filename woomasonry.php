@@ -80,7 +80,8 @@ function woomasonry_isotope_html($atts) {
         ));
     }
  //$do_ac = do_action('woocommerce_before_single_product');
-  $wm_output .=  '<div id="filters" class="button-group">
+  $wm_output .= do_action('woocommerce_before_single_product') . 
+  '<div id="filters" class="button-group">
   <button class="button is-checked" data-filter="*">show all</button>';
 
     if ($wm_catTerms) {
