@@ -2,7 +2,7 @@
 
 /*
   Plugin Name:       WooCommerce Products Masonry Grid
-  Plugin URI:        https://draftpress.com/woocommerce-products-masonry-grid
+  Plugin URI:        http://www.intensewp.com/woomasonry-woocommerce-products-post-masonry-grid/
   Description:       Display your products in masonry grid view. beautiful animation effect when changing the product categories
   Version:           1.4
   Author:            DraftPress
