@@ -126,8 +126,6 @@ function woomasonry_plugin_init() {
   if (!class_exists('WooCommerce')) {
     add_action('admin_notices', 'woomasonry_admin_notice__error');
     //add_shortcode('woomasonry_grid', 'woomasonry_public_error');
-  }else{
-    //add_shortcode('woomasonry_grid', 'woomasonry_isotope_html');
   }
 }
 add_action( 'plugins_loaded', 'woomasonry_plugin_init' );
