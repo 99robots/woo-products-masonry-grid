@@ -1,23 +1,17 @@
 <?php
 
-/**
- *
- * @link              http://www.intensewp.com/
- * @since             1.0.0
- * @package           Woomasonry
- *
- * @wordpress-plugin
- * Plugin Name:       WooCommerce Products Masonry Grid
- * Plugin URI:        http://www.intensewp.com/woomasonry-woocommerce-products-post-masonry-grid/
- * Description:       Display your products in masonry grid view. beautiful animation effect when changing the product categories
- * Version:           1.2
- * Author:            Intense WP
- * Author URI:        http://www.intensewp.com/
- * License:           GPL-2.0+
- * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       woomasonry
- * Domain Path:       /languages
- */
+/*
+  Plugin Name:       WooCommerce Products Masonry Grid
+  Plugin URI:        http://www.intensewp.com/woomasonry-woocommerce-products-post-masonry-grid/
+  Description:       Display your products in masonry grid view. beautiful animation effect when changing the product categories
+  Version:           1.4
+  Author:            DraftPress
+  Author URI:        https://draftpress.com/
+  License:           GPL-2.0+
+  License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
+  Text Domain:       woomasonry
+  Domain Path:       /languages
+ /
 // If this file is called directly, abort.
 if (!defined('WPINC')) {
     die;
@@ -51,13 +45,6 @@ function woomasonry_admin_notice__error() {
     printf('<div class="%1$s"><p>%2$s</p></div>', esc_attr($class), esc_html($message));
 }
 
-function woomasonry_plugin_init() {
-  if (!class_exists('WooCommerce')) {
-    add_action('admin_notices', 'woomasonry_admin_notice__error');
-  }
-}
-add_action( 'plugins_loaded', 'woomasonry_plugin_init' );
-
 function enqueue_woomasonry() {
     wp_enqueue_style('woomasonry_css1', plugins_url('css/layout.css', __FILE__));
 
@@ -66,14 +53,6 @@ function enqueue_woomasonry() {
 }
 
 add_action('wp_enqueue_scripts', 'enqueue_woomasonry');
-/* if (class_exists('WooCommerce')) {
-  add_shortcode('woomasonry_grid', 'woomasonry_isotope_html');
-  } else {
-  #add_action('admin_notices', 'woomasonry_admin_notice__error');
-  add_shortcode('woomasonry_grid', 'woomasonry_public_error');
-  } */
-
-add_shortcode('woomasonry_grid', 'woomasonry_isotope_html');
 
 function woomasonry_public_error() {
     $wm_error_msg = __('It seems WooCommerce is not installed or activated. Woo Masonry Products Grid works only with active Woocommerce plugin.', 'woomasonry');
@@ -85,7 +64,7 @@ function woomasonry_isotope_html($atts) {
     $wm_atts = shortcode_atts(array(
         'number' => 6,
         'cat' => '',
-            ), $atts);
+      ), $atts);
 
     if ($wm_atts['cat'] <> '') {
         $arr_cats = explode(',', $wm_atts['cat']);
@@ -100,10 +79,9 @@ function woomasonry_isotope_html($atts) {
             'orderby' => 'ASC',
         ));
     }
-
-    $wm_output .= do_action('woocommerce_before_single_product') . '
-
-<div id="filters" class="button-group">
+ //$do_ac = do_action('woocommerce_before_single_product');
+  $wm_output .= do_action('woocommerce_before_single_product') . 
+  '<div id="filters" class="button-group">
   <button class="button is-checked" data-filter="*">show all</button>';
 
     if ($wm_catTerms) {
@@ -144,3 +122,11 @@ function woomasonry_isotope_html($atts) {
         return $wm_output;
     }
 }
+add_shortcode('woomasonry_grid', 'woomasonry_isotope_html');
+function woomasonry_plugin_init() {
+  if (!class_exists('WooCommerce')) {
+    add_action('admin_notices', 'woomasonry_admin_notice__error');
+    //add_shortcode('woomasonry_grid', 'woomasonry_public_error');
+  }
+}
+add_action( 'plugins_loaded', 'woomasonry_plugin_init' );
