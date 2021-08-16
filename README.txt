@@ -3,7 +3,7 @@ Contributors: DraftPress, 99robots, charliepatel
 Tags: woocommerce, masonry woocommerce grid, masonry products, woocommerce masonry products
 Donate link: 
 Requires at least: 4.0
-Tested up to: 5.7.2
+Tested up to: 5.8
 Stable tag: 1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -31,8 +31,8 @@ If you set the number to be 5 and if you have total 10 categories in your Woocom
 
 == Changelog ==
 
-= 1.4 - 6/01/21 =
-* Tested - Compatibility with WordPress 5.7.2
+= 1.4 - 08/16/21 =
+* Tested - Compatibility with WordPress 5.8
 
 = 1.3 - 1/13/19 =
 * Fixed - Warnings and Notices
