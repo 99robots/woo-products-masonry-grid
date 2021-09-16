@@ -1,47 +1,69 @@
 <?php if (!defined('ABSPATH')) exit; // Exit if accessed directly                           ?>
-<h1>WooCommerce Products Masonry Grid</h1>
-<p>
-    <?php
-    _e('Thank you for choosing Woo Masonry Products Grid plugin. I hope you will like the plugin and enjoy using it. If you have any support or your feedback, please feel free to <a href="http://support.intensewp.com/" target="_blank">contact us.</a>
-<h3>Quick Tutorial</h3>
-<ul style="list-style: disc inside none;">
-  <li>Woo Masonry works only with shortcode. In order to place a masonry products grid, please follow the shortcode steps below.</li>
-  <li><strong>[woomasonry_grid]</strong> Place this shortcode in WordPress editor or anywhere you want the Masonry Products Grid to display in your website. Please note that it will bring <strong>ALL</strong> products in your website</li>
-  <li><strong>[woomasonry_grid number="3" ]</strong> adding a number attribute will limit the products per category. This number limit works based on your product categories. </li>
-  <li>If you set the number to be 5 and if you have total 10 categories in your Woocommerce website, the masonry grid will show total 50 (5 x 10) products in the grid.</li>
-  <li><strong>[woomasonry_grid number="3" cat=&quot;hoodies, t-shirts&quot;]</strong> adding the cat attribute will limit the products display with those specific categories only. Make sure you add the category slugs separate by comma.</li>
-</ul>', 'woomasonry');
-    ?></p>
-ِ<br /><br />
-<h3><?php _e('Stay Updated and get more customized features directly to your inbox', 'woomasonry'); ?></h3>
-<p>
-    <!-- Begin MailChimp Signup Form -->
-    <link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
-<style type="text/css">
-    #mc_embed_signup{clear:left; font:14px Helvetica,Arial,sans-serif; }
-    /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-       We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-</style>
-<div id="mc_embed_signup">
-    <form action="http://etechy101.us8.list-manage.com/subscribe/post?u=0feea2b1671b773d914b338e6&amp;id=8ca20a276b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-        <?php _e('<strong>We promise, your email will not be shared or spammed ever.</strong> Leave your email below', 'woomasonry'); ?>
-        <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="<?php _e('email address', 'woomasonry'); ?>" required>
-        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-        <div style="position: absolute; left: -5000px;"><input type="text" name="b_b8210f8523d1e31f37518d48e_155e3516fe" value=""></div>
-        <div class="clear"><input type="submit" value="<?php _e('Join', 'woomasonry'); ?>" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-    </form>
+
+<link rel="stylesheet" href="css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+
+<div class="wrap">
+  <h1>Dashboard</h1>
+  <div id="welcome-panel" class="welcome-panel">
+    <div class="welcome-panel-content">
+      <h1 class="text-center mb"><?php _e('Welcome to', 'woomasonry');?> Woo Masonry!</h1>
+      <p class="about-description">Here are some details to get you started:</p>
+      <div class="welcome-panel-column-container">
+        <div class="welcome-panel-column">
+          <h3>Get Started - Add the shortcode now!</h3>
+          <a class="button button-primary button-hero" href="<?php echo admin_url('post-new.php?post_type=page');?>">Add Shortcode To A Page</a>
+          <h3>OR</h3>
+          <a class="button button-primary button-hero" href="https://goo.gl/bCJSeo">Upgrade Now!</a>
+        </div>
+        <div class="welcome-panel-column">
+          <h3>Quick Tutorial</h3>
+          <ul>
+            <li class="dflex"> <i class="fas fa-wallet mr10 pt3"></i>Woo Masonry works only with shortcode. In order to place a masonry products grid, please follow the shortcode steps below. </li>
+            <li class="dflex"> <i class="fas fa-code mr10 pt3"></i><span class="shortcode">[woomasonry_grid]</span> Place this shortcode in WordPress editor or anywhere you want the Masonry Products Grid to display in your website. Please note that it will bring ALL products in your website </li>
+            <li class="dflex"> <i class="fas fa-code mr10 pt3"></i><span class="shortcode">[woomasonry_grid number="3" ]</span> adding a number attribute will limit the products per category. This number limit works based on your product categories. </li>
+            <li class="dflex"> <i class="fas fa-code mr10 pt3"></i>If you set the number to be 5 and if you have total 10 categories in your Woocommerce website, the masonry grid will show total 50 (5 x 10) products in the grid.</li>
+            <li class="dflex"> <i class="fas fa-code mr10 pt3"></i><span class="shortcode">[woomasonry_grid number="3" cat="hoodies, t-shirts"]</span> adding the cat attribute will limit the products display with those specific categories only. Make sure you add the category slugs separate by comma.</li>
+          </ul>
+        </div>
+        <div class="welcome-panel-column welcome-panel-last">
+          <h3>Support</h3>
+          <ul>
+            <li><?php
+                _e('Thank you for choosing Woo Masonry plugin. We hope you will like the plugin and enjoy using it. Please leave us a review if you like our plugin.', 'woomasonry');
+                ?>
+            </li>
+            <li><?php _e('If you have any support or sales related queries, please feel free to send an email to ', 'woomasonry')?> <a href="mailto:sales@intensewp.com">sales@intensewp.com</a></li>
+            <li><?php _e('You can also visit our ', 'woomasonry'); ?><a href="http://support.intensewp.com/" target="_blank"><?php _e('Support Help Desk by clicking here', 'woomasonry'); ?></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-ِ<br /><br />
-<p>
-    <?php
-    _e('<h1>What\'s included in the Pro Version?</h1>
-<ul style="list-style: disc inside none;">
-  <li>Compatible with Visual Composer</li>
-  <li>Show blog post listing in Grid view as well</li>
-  <li>Control the look and feel of the masonry grid via Powerful options panel. Change colors, fonts etc</li>
-  <li>Enable/disable title, pricing, add to cart from options panel</li>
-  <li><a href="http://www.intensewp.com/woomasonry-woocommerce-products-post-masonry-grid/" target="_blank">See screen shots and get more details here</a></li>
-</ul>', 'woomasonry');
-    ?>
-    <a href="https://goo.gl/bCJSeo" target="_blank"><img src="<?php echo plugins_url('images/upgrade-button.png', __FILE__); ?>" /></a>
-</p>
+
+<div class="wrap">
+  <div class="whatsnew info-box pull-left">
+    <h3><?php _e('What\'s PRO?', 'woomasonry'); ?></h3>
+
+    <ul style="list-style: disc inside none;">
+        <li><?php _e('<span class="text-green fs16">[NEW]</span> Compatible with Visual Composer', 'woomasonry'); ?></li>
+        <li><?php _e('<span class="text-green fs16">[NEW]</span> Show blog post listing in Grid view as well', 'woomasonry'); ?></li>
+        <li><?php _e('Control the look and feel of the masonry grid via Powerful options panel. Change colors, fonts etc', 'woomasonry'); ?></li>
+        <li><?php _e('Enable/disable title, pricing, add to cart from options panel', 'woomasonry'); ?></li>
+        <li><?php _e('<a href="http://www.intensewp.com/woomasonry-woocommerce-products-post-masonry-grid/">See screen shots and get more details here</a>', 'woomasonry'); ?></li>
+    </ul>
+  </div>
+  <div id="shortcodes" class="shortcode-box info-box pull-right">
+    <h3><?php _e('How to use Shortcode?', 'woomasonry'); ?></h3>
+    <ul style="list-style: disc inside none;">
+      <li><strong>[woomasonry_grid]</strong> Place this shortcode in WordPress editor or anywhere you want the Masonry Products Grid to display in your website. Please note that it will bring ALL products in your website </li>
+      <li>If you set the number to be 5 and if you have total 10 categories in your Woocommerce website, the masonry grid will show total 50 (5 x 10) products in the grid.</li>
+      <li><strong>[woomasonry_grid number="3" ]</strong> adding a number attribute will limit the products per category. This number limit works based on your product categories. </li>
+      <li><strong>[woomasonry_grid number="3" cat="hoodies, t-shirts"]</strong> adding the cat attribute will limit the products display with those specific categories only. Make sure you add the category slugs separate by comma.</li>
+    </ul>
+    <p class="fs16"><strong>Note:</strong> To easily get the IDs of posts, pages, custom posts, you can use our plugin - <a href="https://wordpress.org/plugins/wpsite-show-ids/">Show IDs by 99 Robots</a></p>
+  </div>
+</div>
+<div class="clearfix">
+</div>

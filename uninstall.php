@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * Fired when the plugin is uninstalled.
  *
  * When populating this file, consider the following flow
