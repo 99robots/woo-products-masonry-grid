@@ -1,5 +1,4 @@
 <?php
-
 /*
 	Plugin Name:       WooCommerce Products Masonry Grid
 	Plugin URI:        http://www.intensewp.com/woomasonry-woocommerce-products-post-masonry-grid/
